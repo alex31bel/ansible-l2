@@ -1,0 +1,15 @@
+---
+- name: ""
+  hosts: servers
+  tasks:
+  
+  - name: ""
+    apt:
+      name:
+        - mc
+        - nano
+        - htop
+        - ca-certificates
+      state: latest
+      
+...
