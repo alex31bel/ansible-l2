@@ -3,12 +3,12 @@
   hosts: servers
   tasks:
 
-  - name: сreate directory
+  - name: "Create directory"
     file:
       path=/tmp/kafka
       state=directory
 
-  - name: Download and Unarchive file to directory
+  - name: "Download and Unarchive file to directory"
     unarchive:
       src: https://downloads.apache.org/kafka/3.3.2/kafka-3.3.2-src.tgz
       dest: /tmp/kafka
