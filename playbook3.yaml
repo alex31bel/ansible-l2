@@ -1,10 +1,10 @@
 ---
-- name: "Install packages Tuned"
+- name: "Editing the motd file"
   hosts: servers
   become: yes
   tasks:
 
-  - name: "add a string to the new file"
+  - name: "Add line to motd file"
     lineinfile: dest=/etc/motd
                 regexp='^'
                 line='\n#Distribution kit for executing Netology tasks.'
