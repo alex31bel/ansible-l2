@@ -7,6 +7,6 @@
   - name: "Add line to motd file"
     lineinfile: dest=/etc/motd
                 regexp='^'
-                line='\n#Distribution kit for executing Netology tasks.'
+                line='\n#Distribution kit for executing Netology tasks. IP:>{{ ansible_default_ipv4.address }}<'
                 state=present
 ...
