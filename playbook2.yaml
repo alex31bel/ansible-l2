@@ -1,6 +1,7 @@
 ---
 - name: "Install packages Tuned"
   hosts: servers
+  become: yes
   tasks:
   
   - name: "Required packages"
@@ -11,11 +12,9 @@
         - tuned-utils-systemtap
       state: latest
       
-  - name: start tuned
+  - name: "Start tuned"
     systemd:
       name: tuned
       state: started
       enabled: yes
-    become: yes
-    become_user: root
 ...
