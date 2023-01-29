@@ -8,6 +8,6 @@
     lineinfile: dest=/etc/motd
                 regexp='^'
                 insertafter=EOF
-                line='\nHello, you have connected to >{{ ansible_facts.ansible_hostname }}< with IP:>{{ ansible_facts.ansible_all_ipv4_addresses }}<. Good luck!'
+                line='\nHello, you have connected to >{{ ansible_hostname }}< with IP:>{{ ansible_default_ipv4.address }}<. Good luck!'
 
 ...
