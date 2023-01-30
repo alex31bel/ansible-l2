@@ -1,6 +1,7 @@
 <h1>Apache running in {{ ansible_hostname }}</h1>
 <br>
-<b>CPU:</b> {{ ansible_processor[3] }} <br>
+<b>CPU:</b> {{ ansible_facts['processor'][2] }} <br>
+<b>CPU Core:</b> {{ ansible_facts['processor_cores'] }} <br>
 <b>RAM:</b> {{ ansible_facts['mounts']['block_size'] }}mb <br>
-<b>HDD:</b> {{ ansible_facts['devices']['size'] }} <br>
+<b>HDD:</b> {{ ansible_facts['devices']['sda']['partitions']['sda1']['size'] }} <br>
 <b>IP-адрес:</b> {{ ansible_default_ipv4.address }} <br>
