@@ -1,7 +1,6 @@
 ---
 - name: "Apache"
   hosts: servers
-  become: yes
   tasks:
 
   - name: "Intsall Apache"
