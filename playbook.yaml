@@ -1,12 +1,7 @@
 ---
-- name: "Apache"
+- name: "Install Apache"
   hosts: servers
   become: yes
-  tasks:
-
-  - name: "Intsall Apache"
-    tags:
-      - install_apache
-    roles:
-      - apache
+  roles:
+    - apache
 ...
